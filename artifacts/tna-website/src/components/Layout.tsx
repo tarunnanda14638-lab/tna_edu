@@ -203,17 +203,11 @@ export function Layout({ children }: { children: ReactNode }) {
               <ul className="space-y-4 text-sm text-primary-foreground/80">
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-accent shrink-0" />
-                  <div className="flex flex-col">
-                    <a href="mailto:tanyananda2253@gmail.com" className="hover:text-white transition-colors">tanyananda2253@gmail.com</a>
-                    <a href="mailto:tanyananda91@gmail.com" className="hover:text-white transition-colors">tanyananda91@gmail.com</a>
-                  </div>
+                  <a href="mailto:tanyanandaacademy07@gmail.com" className="hover:text-white transition-colors">tanyanandaacademy07@gmail.com</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div className="flex flex-col gap-0.5">
-                    <a href="tel:+918607663023" className="hover:text-white transition-colors">+91 86076 63023</a>
-                    <a href="tel:+917082563023" className="hover:text-white transition-colors">+91 70825 63023</a>
-                  </div>
+                  <a href="tel:+917082563023" className="hover:text-white transition-colors">+91 70825 63023</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-accent shrink-0" />

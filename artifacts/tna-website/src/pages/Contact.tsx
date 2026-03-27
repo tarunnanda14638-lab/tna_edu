@@ -1,5 +1,5 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Mail, Phone, MapPin, Send, MessageCircle, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Send, MessageCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -66,30 +66,16 @@ export default function Contact() {
               </div>
 
               <div className="space-y-4">
-                <a href="tel:+918607663023" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary transition-colors group">
+                <a href="mailto:tanyanandaacademy07@gmail.com" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary transition-colors group">
                   <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground mt-1">+91 86076 63023</p>
-                    <p className="text-xs text-muted-foreground/70 mt-0.5">Tap to call directly</p>
-                  </div>
-                </a>
-
-                <div className="flex items-start gap-4 p-4 rounded-2xl">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground">Emails</h4>
-                    <div className="mt-1 space-y-1">
-                      <a href="mailto:tanyananda91@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">tanyananda91@gmail.com</a>
-                      <a href="mailto:tanyananda2253@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">tanyananda2253@gmail.com</a>
-                    </div>
-                    <p className="text-xs text-muted-foreground/70 mt-1">Tap to email directly</p>
+                    <h4 className="font-bold text-foreground">Email</h4>
+                    <p className="text-muted-foreground mt-1">tanyanandaacademy07@gmail.com</p>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5">Tap to email directly</p>
                   </div>
-                </div>
+                </a>
 
                 <a href="https://wa.me/917082563023" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-[#25D366]/10 transition-colors group">
                   <div className="w-12 h-12 bg-[#25D366]/20 text-[#25D366] rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-colors">

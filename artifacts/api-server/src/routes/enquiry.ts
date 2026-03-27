@@ -62,7 +62,7 @@ router.post("/enquiry", async (req, res) => {
   try {
     await transporter.sendMail({
       from: `"TNA Website" <${process.env.GMAIL_USER}>`,
-      to: "tanyananda91@gmail.com, tanyananda2253@gmail.com",
+      to: "tanyanandaacademy07@gmail.com",
       subject: emailSubject,
       html,
     });
