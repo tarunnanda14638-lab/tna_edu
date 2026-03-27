@@ -100,7 +100,7 @@ export function Layout({ children }: { children: ReactNode }) {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={cn(
                 "md:hidden p-2 rounded-lg transition-colors",
-                isScrolled ? "text-foreground" : "text-white",
+                isMobileMenuOpen ? "text-foreground" : isScrolled ? "text-foreground" : "text-white",
                 "hover:bg-black/5"
               )}
             >
