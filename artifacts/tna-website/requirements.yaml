@@ -1,0 +1,21 @@
+packages:
+  "framer-motion": "For high-quality page transitions and scroll-triggered animations"
+  "clsx": "For conditional tailwind classes"
+  "tailwind-merge": "For merging tailwind classes safely"
+  "lucide-react": "For UI icons"
+
+images:
+  - path: "artifacts/tna-website/public/images/hero-bg.png"
+    description: "Abstract luxurious wave pattern background in deep navy blue and vibrant gold accents, modern corporate education feel, very clean and subtle"
+    aspect_ratio: "16:9"
+  - path: "artifacts/tna-website/public/images/about-bg.png"
+    description: "Elegant professional education background, abstract geometric shapes in white, soft gray, and navy blue, modern and premium"
+    aspect_ratio: "16:9"
+  - path: "artifacts/tna-website/public/images/results-bg.png"
+    description: "Abstract success celebration background with gold confetti particles over a deep navy blue background, premium academic feel"
+    aspect_ratio: "16:9"
+
+notes:
+  - No backend required; this is a purely static frontend conversion focused on UI/UX.
+  - Using URL hash '#book-demo' to trigger the booking modal across all pages globally without complex state management.
+  - Relying on framer-motion for smooth entrance animations.

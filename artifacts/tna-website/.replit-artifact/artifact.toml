@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Tanya Nanda Academy"
+version = "1.0.0"
+id = "artifacts/tna-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19904
+
+[services.development]
+run = "pnpm --filter @workspace/tna-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tna-website", "run", "build" ]
+publicDir = "artifacts/tna-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19904"
+BASE_PATH = "/"
