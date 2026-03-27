@@ -12,7 +12,6 @@ export function BookingModal() {
     subject: ""
   });
 
-  // Listen for hash changes to open the modal
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === "#book-demo") {
@@ -21,26 +20,35 @@ export function BookingModal() {
       }
     };
 
-    // Check initial hash
     handleHashChange();
-
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   const closeModal = () => {
     setIsOpen(false);
-    // Remove hash without scrolling
     history.replaceState(null, "", window.location.pathname);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
+
+    const subject = encodeURIComponent(`Free Demo Request from ${formData.name} - Tanya Nanda Academy`);
+    const body = encodeURIComponent(
+      `A new free demo class request has been submitted on the TNA website:\n\n` +
+      `Student Name: ${formData.name}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Class: ${formData.class}\n` +
+      `Subject: ${formData.subject}\n\n` +
+      `Please contact the student to schedule their demo class.`
+    );
+
+    window.open(`mailto:tanyananda91@gmail.com,tanyananda2253@gmail.com?subject=${subject}&body=${body}`, "_blank");
+
     setTimeout(() => {
       setIsSubmitted(true);
       setFormData({ name: "", phone: "", class: "", subject: "" });
-    }, 800);
+    }, 400);
   };
 
   return (
@@ -103,7 +111,7 @@ export function BookingModal() {
                       <input
                         required
                         type="text"
-                        placeholder="John Doe"
+                        placeholder="Full Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
@@ -114,7 +122,7 @@ export function BookingModal() {
                       <input
                         required
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 XXXXX XXXXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
@@ -129,7 +137,7 @@ export function BookingModal() {
                           onChange={(e) => setFormData({...formData, class: e.target.value})}
                           className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                         >
-                          <option value="">Select Class</option>
+                          <option value="">Select</option>
                           <option value="Class 9">Class IX</option>
                           <option value="Class 10">Class X</option>
                           <option value="Class 11">Class XI</option>
@@ -145,7 +153,7 @@ export function BookingModal() {
                           onChange={(e) => setFormData({...formData, subject: e.target.value})}
                           className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                         >
-                          <option value="">Select Subject</option>
+                          <option value="">Select</option>
                           <option value="Economics">Economics</option>
                           <option value="Mathematics">Mathematics</option>
                           <option value="Both">Both</option>
