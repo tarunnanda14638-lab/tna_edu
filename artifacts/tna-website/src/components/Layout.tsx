@@ -21,6 +21,7 @@ const navLinks = [
 export function Layout({ children }: { children: ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHome] = useRoute("/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +37,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <header
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300",
-          isScrolled ? "glass py-3 shadow-md" : "bg-transparent py-5"
+          isScrolled ? "glass py-3 shadow-md" : isHome ? "bg-transparent py-5" : "bg-primary py-5"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
