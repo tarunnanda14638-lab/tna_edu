@@ -82,7 +82,7 @@ export default function Contact() {
                 </div>
 
                 {/* WhatsApp */}
-                <a href="https://wa.me/917082563230" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-[#25D366]/10 transition-colors group">
+                <a href="https://wa.me/917082563023" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-4 rounded-2xl hover:bg-[#25D366]/10 transition-colors group">
                   <div className="w-12 h-12 bg-[#25D366]/20 text-[#25D366] rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-colors">
                     <MessageCircle className="w-6 h-6" />
                   </div>
