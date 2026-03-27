@@ -3,12 +3,13 @@ import { Quote, Star } from "lucide-react";
 
 export default function Results() {
   const testimonials = [
-    { name: "Ananya S.", score: "98%", subject: "Economics (Class XII)", text: "Tanya ma'am's notes are a lifesaver. I used to struggle with Macroeconomics, but her way of breaking down complex flowcharts made it my highest scoring subject!" },
-    { name: "Rahul M.", score: "95%", subject: "Mathematics (Class X)", text: "I joined TNA in class 9. The regular tests and constant motivation took away my fear of Math. Scored way above my own expectations." },
-    { name: "Priya K.", score: "96%", subject: "Economics (Class XII)", text: "The doubt sessions are the best part. No question is too silly. The focus on how to present answers according to CBSE marking scheme was game-changing." },
-    { name: "Vikram D.", score: "92%", subject: "Mathematics (Class X)", text: "Offline classes here have a great environment. Very focused but not stressful. The worksheets provided are more than enough to score a 90+." },
-    { name: "Sneha R.", score: "94%", subject: "Economics (Class XI)", text: "Statistics used to be scary, but learning it here made it logical and easy to score. Highly recommend TNA to all juniors!" },
-    { name: "Karan T.", score: "97%", subject: "Mathematics & Economics", text: "Gaining maximum utility is truly the motto here. Every hour spent studying here translates directly into marks. Best decision of my 12th grade." },
+    { name: "Tanisha Arora", score: "98%", subject: "Economics (Class XII)", text: "It's an excellent institution for students who really aspire to learn." },
+    { name: "Samaira Khurana", score: "95%", subject: "Mathematics (Class X)", text: "I joined TNA in class 9. The regular tests and constant motivation took away my fear of Math. Scored way above my own expectations." },
+    { name: "Seerat Kakkar", score: "96%", subject: "Economics (Class XII)", text: "The doubt sessions are the best part. No question is too silly. The focus on how to present answers according to CBSE marking scheme was game-changing." },
+    { name: "Harsh Arora", score: "92%", subject: "Mathematics (Class X)", text: "Offline classes here have a great environment. Very focused but not stressful. The worksheets provided are more than enough to score a 90+." },
+    { name: "Jasmeet Singh", score: "94%", subject: "Economics (Class XI)", text: "Statistics used to be scary, but learning it here made it logical and easy to score. Highly recommend TNA to all juniors!" },
+    { name: "Payal Kataria", score: "97%", subject: "Mathematics & Economics", text: "Gaining maximum utility is truly the motto here. Every hour spent studying here translates directly into marks. Best decision of my 12th grade." },
+    { name: "Amneet Kaur", score: "93%", subject: "Economics (Class XII)", text: "Tanya ma'am's notes are a lifesaver. I used to struggle with Macroeconomics, but her way of breaking down complex flowcharts made it my highest scoring subject!" },
   ];
 
   return (
