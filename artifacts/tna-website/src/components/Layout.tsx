@@ -53,13 +53,13 @@ export function Layout({ children }: { children: ReactNode }) {
               <div className="flex flex-col">
                 <span className={cn(
                   "font-display font-bold text-lg sm:text-xl leading-tight transition-colors",
-                  isScrolled ? "text-primary" : "text-primary md:text-white"
+                  isScrolled ? "text-primary" : "text-white"
                 )}>
                   TANYA NANDA ACADEMY
                 </span>
                 <span className={cn(
                   "text-[10px] sm:text-xs font-medium tracking-wide transition-colors",
-                  isScrolled ? "text-accent-foreground/70" : "text-primary/80 md:text-white/80"
+                  isScrolled ? "text-accent-foreground/70" : "text-white/80"
                 )}>
                   Gain your maximum utility
                 </span>
@@ -100,7 +100,7 @@ export function Layout({ children }: { children: ReactNode }) {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={cn(
                 "md:hidden p-2 rounded-lg transition-colors",
-                isScrolled ? "text-foreground" : "text-primary sm:text-white",
+                isScrolled ? "text-foreground" : "text-white",
                 "hover:bg-black/5"
               )}
             >
