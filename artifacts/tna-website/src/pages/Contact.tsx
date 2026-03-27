@@ -88,7 +88,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">WhatsApp</h4>
-                    <p className="text-muted-foreground mt-1">+91 70825 63230</p>
+                    <p className="text-muted-foreground mt-1">+91 70825 63023</p>
                     <p className="text-xs text-muted-foreground/70 mt-0.5">Tap to call / message on WhatsApp</p>
                   </div>
                 </a>
