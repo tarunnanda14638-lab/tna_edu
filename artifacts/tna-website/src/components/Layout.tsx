@@ -208,12 +208,15 @@ export function Layout({ children }: { children: ReactNode }) {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-accent shrink-0" />
-                  <a href="tel:+919876543210" className="hover:text-white transition-colors">+91 98765 43210</a>
+                  <Phone className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-0.5">
+                    <a href="tel:+918607663023" className="hover:text-white transition-colors">+91 86076 63023</a>
+                    <a href="tel:+917082563230" className="hover:text-white transition-colors">+91 70825 63230</a>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-accent shrink-0" />
-                  <span>Available for Online & Offline Classes</span>
+                  <span>307-A Huda Sector 12, Panipat, Haryana 132103</span>
                 </li>
               </ul>
             </div>
