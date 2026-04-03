@@ -2,6 +2,8 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { Mail, MapPin, Send, MessageCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";
+
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,22 +19,25 @@ export default function Contact() {
     setError("");
 
     try {
-      const res = await fetch("/api/enquiry", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: "contact",
-          name: `${form.firstName} ${form.lastName}`.trim(),
-          email: form.email,
-          phone: form.phone,
-          message: form.message,
+          access_key: WEB3FORMS_KEY,
+          subject: `New Enquiry from ${form.firstName} ${form.lastName}`.trim(),
+          from_name: "TNA Website",
+          "Name": `${form.firstName} ${form.lastName}`.trim(),
+          "Email": form.email,
+          "Phone": form.phone,
+          "Message": form.message,
+          botcheck: "",
         }),
       });
       const data = await res.json();
       if (data.success) {
         setIsSubmitted(true);
       } else {
-        setError(data.error || "Something went wrong. Please try again.");
+        setError(data.message || "Something went wrong. Please try again.");
       }
     } catch {
       setError("Could not send message. Please call or WhatsApp us directly.");

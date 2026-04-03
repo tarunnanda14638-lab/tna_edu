@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { X, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";
+
 const CLASS_SUBJECTS: Record<string, string[]> = {
   "Class 9":  ["Mathematics"],
   "Class 10": ["Mathematics"],
@@ -57,15 +59,18 @@ export function BookingModal() {
     setError("");
 
     try {
-      const res = await fetch("/api/enquiry", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          type: "demo",
-          name: formData.name,
-          phone: formData.phone,
-          classLevel: formData.class,
-          subject: formData.subject,
+          access_key: WEB3FORMS_KEY,
+          subject: `Free Demo Request — ${formData.name} (${formData.class}, ${formData.subject})`,
+          from_name: "TNA Website",
+          "Student Name": formData.name,
+          "Phone": formData.phone,
+          "Class": formData.class,
+          "Subject": formData.subject,
+          botcheck: "",
         }),
       });
       const data = await res.json();
@@ -73,7 +78,7 @@ export function BookingModal() {
         setIsSubmitted(true);
         setFormData({ name: "", phone: "", class: "", subject: "" });
       } else {
-        setError(data.error || "Something went wrong. Please try again.");
+        setError(data.message || "Something went wrong. Please try again.");
       }
     } catch {
       setError("Could not send request. Please call or WhatsApp us directly.");
