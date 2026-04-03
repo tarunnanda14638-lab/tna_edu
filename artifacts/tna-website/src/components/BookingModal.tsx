@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { X, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY ?? "";
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL ?? "";
 
 const CLASS_SUBJECTS: Record<string, string[]> = {
   "Class 9":  ["Mathematics"],
@@ -59,22 +59,19 @@ export function BookingModal() {
     setError("");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch(FORMSPREE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `Free Demo Request — ${formData.name} (${formData.class}, ${formData.subject})`,
-          from_name: "TNA Website",
           "Student Name": formData.name,
           "Phone": formData.phone,
           "Class": formData.class,
           "Subject": formData.subject,
-          botcheck: "",
+          "_subject": `Free Demo Request — ${formData.name} (${formData.class}, ${formData.subject})`,
         }),
       });
       const data = await res.json();
-      if (data.success) {
+      if (data.ok) {
         setIsSubmitted(true);
         setFormData({ name: "", phone: "", class: "", subject: "" });
       } else {
