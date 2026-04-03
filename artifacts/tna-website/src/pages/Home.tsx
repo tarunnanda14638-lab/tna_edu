@@ -31,12 +31,6 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-3xl">
-            <AnimatedSection direction="down">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-accent/20 text-accent border border-accent/30 font-semibold text-sm mb-6 shadow-[0_0_15px_rgba(251,192,45,0.3)]">
-                Batch Starting Soon — Limited Seats
-              </span>
-            </AnimatedSection>
-            
             <AnimatedSection delay={0.1}>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold leading-[1.1] mb-6 text-white text-balance">
                 Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-200">Economics & Mathematics</span> with Confidence.
