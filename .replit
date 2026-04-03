@@ -29,3 +29,4 @@ timeoutMs = 20000
 
 [userenv.shared]
 VITE_WEB3FORMS_KEY = "2196a584-8a21-4ef1-ad91-c9e8e4e62fb5"
+VITE_FORMSPREE_URL = "https://formspree.io/f/maqlpezg"
